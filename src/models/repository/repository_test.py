@@ -1,10 +1,12 @@
+# pylint: disable-all
+
 import pytest
-from src.models.connection.connection_handler import DbConnectionHandler
+#from src.models.connection.connection_handler import DbConnectionHandler
 from .orders_repository import OrdersRepository
 
-db_connection_handler = DbConnectionHandler()
-db_connection_handler.connect_to_db()
-conn = db_connection_handler.get_db_connection()
+#db_connection_handler = DbConnectionHandler()
+#db_connection_handler.connect_to_db()
+#conn = db_connection_handler.get_db_connection()
 
 @pytest.mark.skip(reason="interacao com o banco")
 def test_insert_document():
