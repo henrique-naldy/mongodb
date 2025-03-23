@@ -1,4 +1,4 @@
-from  pymongo import MongoClient
+from pymongo import MongoClient
 
 class DbConnectionHandler:
     def __init__(self) -> None:
@@ -18,3 +18,5 @@ class DbConnectionHandler:
 
     def get_db_connection(self):
         return self.__db_connection
+    
+db_connection_handler = DbConnectionHandler()
