@@ -28,4 +28,4 @@ def test_registry_order_validator_with_errors():
         }
     }  
     with pytest.raises(Exception):
-        registry_order_validator(body_with_error)  
+        registry_order_validator(body_with_error)
