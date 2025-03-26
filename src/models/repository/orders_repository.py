@@ -47,7 +47,7 @@ class OrdersRepository(OrdersRepositoryInterface):
     def edit_registry(self, order_id: str, update_fields: dict) -> None:
         collection = self.__db_connection.get_collection(self.__collection_name)
         collection.update_one(
-            { "_id": ObjectId('order_id') }, # filtros
+            { "_id": ObjectId(order_id) }, # filtros
             { "$set": update_fields } # edição
         )
     
